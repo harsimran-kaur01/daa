@@ -252,12 +252,6 @@ Assembly → (Painting + Wiring) → Testing → Packaging
 
 ---
 
-## 👩‍💻 Author
-
-**Navya S**
-
----
-
 ## 📌 Conclusion
 
 This project demonstrates how topological sorting can be used to:
