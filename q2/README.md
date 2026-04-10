@@ -1,4 +1,4 @@
-````markdown
+
 # 🏭 Manufacturing Workflow Optimization using Topological Sorting
 
 ---
