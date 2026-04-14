@@ -64,12 +64,25 @@ Security auditing
 Detecting hidden access paths
 ```
 ## Complexity
-```
-Time Complexity: O(n³)
-Space Complexity: O(n²)
 
-Why O(n³)?
-Because the algorithm uses three nested loops to check all possible intermediate paths between every pair of nodes.
+![alt text](tc-sc.jpeg)
+
+## Feasibility for Large Systems
+```
+Warshall’s algorithm is suitable for small to medium-sized graphs, but for large-scale access control systems, it becomes inefficient due to its cubic time complexity.
+```
+## Interpretation of Transitive Closure
+```
+If:
+graph[i][j] = 1
+It means:
+User i can access j directly OR indirectly
+Example:
+Admin → Manager  
+Manager → Employee
+After closure:
+Admin → Employee 
+Transitive closure reveals all indirect access permissions in the system.
 ```
 ## Security Insight
 ```
@@ -78,6 +91,13 @@ This helps detect:
 Indirect privilege escalation
 Hidden access chains
 Over-permissioned users
+```
+## Security Risks
+```
+1. Unintended Access
+Indirect paths may grant access that was not explicitly intended
+2. Privilege Escalation
+If there is cycle in the graph everyone would get access to everything
 ```
 ##  Conclusion
 
