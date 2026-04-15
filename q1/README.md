@@ -52,7 +52,67 @@ The problem is modeled as a **complete weighted graph**:
 5. Keep track of the minimum cost route
 
 ---
+## ⏱️ Time Complexity Analysis (Brute Force TSP)
 
+The brute-force approach evaluates all possible routes (permutations of cities).
+
+---
+
+### 🔢 Number of Possible Routes
+
+- Starting city is fixed
+- Remaining cities = `n - 1`
+
+Number of permutations:
+
+\[
+(n - 1)!
+\]
+
+---
+
+### 🔁 Cost Computation per Route
+
+For each route, the algorithm computes total travel cost by traversing all cities:
+
+\[
+O(n)
+\]
+
+---
+
+### 📊 Total Time Complexity
+
+\[
+\text{Total Time} = (n - 1)! \times O(n)
+\]
+
+\[
+= O(n \cdot (n - 1)!)
+\]
+
+\[
+= O(n!)
+\]
+
+---
+
+### 📈 Growth Illustration
+
+| n  | Number of Routes |
+|----|------------------|
+| 4  | 6                |
+| 5  | 24               |
+| 10 | 362,880          |
+| 15 | ~87 billion      |
+
+---
+
+### ⚠️ Conclusion
+
+- Time complexity grows **factorially**
+- Becomes infeasible for large `n`
+- Practical only for small inputs (typically `n ≤ 10–12`)
 ## ⚠️ Limitations of Brute Force
 
 - Explores **all possible permutations**
