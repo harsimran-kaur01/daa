@@ -83,16 +83,15 @@ O(n)
 
 ### 📊 Total Time Complexity
 
-\[
-\text{Total Time} = (n - 1)! \times O(n)
+\[ {Total Time} = (n - 1)! x O(n)
 \]
 
 \[
-= O(n \cdot (n - 1)!)
+T = O(n \cdot (n - 1)!)
 \]
 
 \[
-= O(n!)
+T = O(n!)
 \]
 
 ---
